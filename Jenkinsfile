@@ -14,7 +14,7 @@ pipeline {
                 script {
                     app = docker.build("ostap/train-schedule")
                     app.inside {
-                        sh 'echo $(curl localhost:8080)'
+                        sh 'echo $(curl 192.168.10.12:8080)'
                     }
                 }
             }
